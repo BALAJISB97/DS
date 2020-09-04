@@ -45,6 +45,15 @@ class Graph:
             for j in range(self.NumVertices):
                 v.append(self.AdjMatrix[i][j])
             print(v)
+    
+    def getNbr(self,vert):
+        c=[]
+        for i in range(self.NumVertices):
+            if self.AdjMatrix[self.GetVertex(vert.GetId())][i]!=-1:
+                #print('Connection for',vert.GetId(),' is',self.Vertices[i].GetId())
+                c.append(self.Vertices[i])
+        return c
+
 
 
     def getConnections(self):
@@ -70,3 +79,6 @@ G1.AddEgde('f','e',70)
 G1.printMatrix()
 print(G1.getConnections())
 
+#-----CALLing Get neibhours----------
+for v in G1.Vertices:
+    G1.getNbr(v)
