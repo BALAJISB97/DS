@@ -3,7 +3,7 @@ def matrixprinter(arr):
         for j in range(len(arr[0])):
             print(arr[i][j],' ',end="")
         print()
-
+#TimeComplexity O(2(n*m)) space complexity O(n*m)
 def isSubsetSumAvailable(arr,sum):
     n=len(arr)
     m=sum
