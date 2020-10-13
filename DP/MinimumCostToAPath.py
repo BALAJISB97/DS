@@ -1,4 +1,9 @@
-
+"""
+5 1 2 6 Starting from first cell in this row, find out minimum val/cost to reach last cell in the last row.
+9 9 7 5
+3 1 4 8
+you can right or down
+"""
 def MinimumCost(arr):
     """
     Func gives you the minimum cost to reach 1,1 or origin to the end point N,M

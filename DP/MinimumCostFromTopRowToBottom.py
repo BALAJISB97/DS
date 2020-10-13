@@ -20,27 +20,22 @@ def MinimumCost(arr):
             #down always exists as we are starting from the last before row to the first row.
             mi=float('inf')
             d=dp[i+1][j]
-            print(' Down = ',d ," min here = ",mi,end="")
             mi=min(d,mi)
             #down right
             if i+1 <r and j+1 <c:
                 dr=dp[i+1][j+1]
                 mi=min(dr,mi)
-                print(' Down right = ',dr ," min here =",mi,end="")
+               
 
             #down left:
             if i+1<r and j-1 >=0:
                 dl=dp[i+1][j-1]
                 mi=min(dl,mi)
-                print(' Down left = ',dl ," min here =",mi,end="")
                 
             #right
             if j+1 <c:
                 r=dp[i][j+1]
-                print(' right = ',r ,end="")
-                print(" Checking right values",r,mi)
                 mi=min(r,mi)
-            print("\n i =",i,"j =",j,mi)
             dp[i][j]=mi+arr[i][j]
     print(dp)
             
