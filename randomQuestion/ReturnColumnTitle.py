@@ -1,5 +1,5 @@
 '''
-Leetcode 168
+Q:Q168
 Time Complexity : O(1) and space complexity O(n) for recurise calls
 Given a positive integer, return its corresponding column title as appear in an Excel sheet.
 For example:
@@ -61,5 +61,7 @@ class Solution:
         s=""
         s=self.rer(n,s)
         return s
+
+#Inputs
 s=Solution()
 print(s.convertToTitle(1300001))
